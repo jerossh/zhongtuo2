@@ -1,0 +1,32 @@
+extends ../layout
+block content
+  #content
+    #service_content
+      .container
+        .unit
+          .col-md-9
+            .new_content
+              .news_block
+                h2 #{blog.title}
+                article 
+                  p  #{blog.article}
+          .col-md-3
+            .sidebar_right
+              .sidebar_block
+                .category
+                  h3 文章分类
+                  ul
+                    li: a 公司新闻
+                    li: a 财务资讯
+                    li: a 注册制度
+              .sidebar_block
+                .category
+                  h3 近期新闻
+                  ul
+                    li: a 嘉兴盛驰推出网络事业部门嘉兴盛驰推出网络事业部门
+                    li: a 嘉兴盛驰推出网络事业部门
+                    li: a 嘉兴盛驰推出网络事业部门
+          .clearfix
+      .extra-border-element
+        .extra-border-inner.back_white
+            

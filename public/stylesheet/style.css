@@ -1,0 +1,344 @@
+* {
+  color: #777;
+  font-family: "microsoft yahei"
+}
+.container {
+    width: 1310px;
+}
+ul{
+ padding-left: 0;
+}
+li {
+    list-style: none;
+}
+
+/*header {
+  background-color: #6154a1;
+}*/
+.page-title {
+  padding: 2rem 0 8rem;
+}
+#header .navbar {
+  padding: 1rem 0;
+}
+#header a {
+  color: #fefefe;
+}
+#header .nav a.active {
+  border-bottom: 2px solid #eee;
+}
+#header a:hover {
+  color: #6154a1;
+  border-radius: 3px;
+}
+#header .page-title *{
+  color: #eee;
+}
+#header .page-title h1{
+  font-size: 5rem;
+}
+#header .page-title p{
+  font-size: 1.6rem;
+}
+.extra-border-element{
+  position: relative;
+}
+.extra-border-element .extra-border-inner {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    top: -39px;
+    z-index: 99;
+}
+.back_purple {
+    background-color: #6154a1;
+}
+
+
+/*内容去开始*/
+/*jon自定义属性*/
+.unit {
+  padding: 5rem 0 ;
+}
+.unit-header .subheading span{
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ccc;
+}
+.unit-header h2 {
+  margin-top: 1rem;
+}
+.text-block{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+.space {
+  height: 2rem;
+}
+.line {
+  border-bottom: 1px solid #bbb;
+  text-align: center;
+}
+.line .icon {
+  margin-bottom: -14px;
+  padding: 8px;
+  display: inline-block;
+  background-color: white;
+}
+
+.iconbox_col .iconbox>div{
+  display: inline-block;
+  float: left;
+}
+
+.iconbox_col .iconbox_icon{
+  font-size: 3rem;
+  border: 1px solid #6154a1;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+.iconbox_col .iconbox_icon i:before{
+  color: #6154a1;
+}
+.iconbox_icon i {
+  padding: 20px;
+}
+.iconbox_col .iconbox_content{
+  margin-left: 1rem;
+}
+.iconbox_col .iconbox_content h3{
+  margin-top: 0.8rem;
+}
+
+
+/*section设置*/
+.service {
+  background-color: #fafafa;
+}
+.service .line .icon {
+  background-color: #fafafa;
+}
+
+.back_white {
+  background-color: #fff;
+}
+
+#portfolio .no_margin_padding {
+  padding: 0;
+  margin: 0;
+  height: 330px;
+  overflow: hidden;
+  position: relative;
+}
+#portfolio .no_margin_padding img {
+    vertical-align: middle;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+/*footer*/
+footer * {
+  color: #fefefe;
+}
+footer .concact {
+  /*background: #6154a1;*/
+  padding: 3rem 0;
+}
+footer a:focus, footer a:hover {
+    color: #23527c;
+    text-decoration: blink;
+}
+footer .info {
+  background: #333;
+}
+footer .info *{
+  color: #ddd;
+}
+footer .info li{
+  list-style: none;
+  padding: 4px 0;
+}
+
+
+
+/*关于页面*/
+/*.about_info, .back_gray {
+  background-color: #555;
+}*/
+/*.about_info *{
+  color: #eee;
+}*/
+
+.about_info h3 {
+  margin-top: 0;
+}
+.about_info ul li {
+  padding: 8px 0;
+}
+.dmask .title {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 17pt;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+.testimonial p {
+    /*background: #6154a1;*/
+    border: 1px solid #9d5e9e;
+    font-weight: 500;
+    margin: 0;
+    padding: 27px 25px;
+    color: #9d5e9e;
+    border-radius: 3px;
+    line-height: 1.7;
+}
+.testimonials-arrow {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #6154a1;
+    border-right: 1px solid #6154a1;
+    border-top: 0 none;
+    content: "";
+    display: block;
+    height: 14px;
+    margin-bottom: 10px;
+    margin-left: 45px;
+    margin-top: -7px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 14px;
+}
+.testimonial-image {
+    float: left;
+    height: 70px;
+    position: relative;
+    width: 70px;
+}
+.our-clients .testimonial-image img {
+    border: medium none;
+    padding: 0;
+}
+.testimonial-image img {
+    border: 1px solid #DDDDDD;
+    border-radius: 50px 50px 50px 50px;
+    height: 70px !important;
+    padding: 4px;
+    width: 70px !important;
+}
+.our-clients .testimonial-author-info {
+    color: #DDDDDD;
+}
+.testimonial-author-info {
+    color: #666;
+    padding: 10px 0 0 90px;
+}
+.testimonial-author-info a {
+    color: #555;
+    font-weight: 900;
+    display: block;
+}
+
+
+
+/*服务*/
+  #service{
+
+  }
+.iconbox_right {
+  padding: 2rem 0;
+}
+.iconbox_content_right {
+    margin-right: 100px;
+    text-align: right;
+}
+.iconbox_content_left {
+    margin-right: 0;
+    margin-left: 100px;
+    text-align: left;
+}
+.iconbox_col .iconbox_right .iconbox_icon {
+    padding-top: 4px;
+    margin-top: 4rem;
+    width: 80px;
+    height: 80px;
+}
+.padding-left {
+  padding-left: 4rem;
+}
+.padding-right {
+  padding-right: 4rem;
+  border-right: 1px dashed #cdc9dc;
+}
+
+#service .iconbox_col .iconbox_icon {
+  border-color: #9e5e5e;
+}
+
+
+.news_block {
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px dashed #ddd;
+}
+.news_block h2 {
+  padding-bottom: 1rem;
+  font-size: 2.4rem;
+  color: #333;
+}
+
+/*侧边栏*/
+.sidebar_right {
+
+}
+.sidebar_right h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+.sidebar_right .sidebar_block {
+  border: 1px solid #eee;
+  background-color: #FEFEFE;
+  padding: 0 2rem 2rem 3rem;
+  margin-bottom: 2rem;
+  border-radius: 3px;
+}
+.sidebar_right h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+.sidebar_right li {
+  padding: 0.4rem 0;;
+}
+.sidebar_right li a {
+  font-size: 1.4rem;
+  color: #999;
+}
+.navbar-nav>li>a {
+    padding: 2px 2px;
+    margin: 15px;
+}
+
+.contact_form label {
+
+}
+
+/*变色*/
+.back_contact {
+    background-color: #548ca1;
+}
+.back_about{
+    background-color: #9d5e9e;
+}
+.back_service{
+    background-color: #9e5e5e;
+}
+.back_news{
+    background-color: #487ead;
+}

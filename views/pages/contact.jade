@@ -1,0 +1,53 @@
+extends ../layout
+block content
+  #content
+    #contact_content
+      .container
+        .unit
+          .col-md-8
+            .contact_content
+              .contact_form
+                h2 留言表
+                .subheading 不论何时，我们都已经准备好为你服务
+                form.form-horizontal#contact_form(method="post", action="/contact")
+                  .form-group
+                    .col-md-6                  
+                        label.control-label 姓名：
+                        input.form-control(type="text" ,placeholder="名字", name="client[name]")
+                    .col-md-6
+                        label.control-label 电话：
+                        input.form-control(type="tel" ,placeholder="手机，电话", name="client[tel]")
+                  .form-group
+                    .col-md-6                  
+                        label.control-label 邮箱：
+                        input.form-control(type="email" ,placeholder="邮箱，可以为你发送最新优惠活动", name="client[mail]")
+                    .col-md-6
+                      
+                        label.control-label 地区：
+                        input.form-control(type="text" ,placeholder="你所在的地区", name="client[address]")
+                  .form-group
+                    .col-md-12
+                      
+                        label.control-label 留言信息：
+                        textarea.form-control(rows="8", cols="20",placeholder="输入信息", name="client[info]")
+                  .col-md-2
+                    input.btn.btn-primary.btn-block(value='提交', name='submit', type='submit')
+                  .clearfix
+
+          .col-md-4
+            .sidebar_right
+              .sidebar_block
+                .category
+                  h3 联系方式
+                  ul
+                    li: a 联系人
+                    li: a 电话
+                    li: a 邮箱
+                  h3 百度地图
+                  img.img-responsive(src="/images/map.jpg")
+
+          .clearfix
+      .extra-border-element
+        .extra-border-inner.back_white
+        
+            
