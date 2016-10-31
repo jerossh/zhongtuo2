@@ -16,7 +16,7 @@ exports.indexBlog = function(req, res) {
   Blog.fetchThree(function( err, BlogsData) {
     if(err) console.log(err);
     blogs = BlogsData
-    res.render('index', {
+    res.render('index.pug', {
       title: '中誉会计',
       slides: res.slides,
       blogs: blogs

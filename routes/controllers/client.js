@@ -7,7 +7,7 @@ exports.saveClient = function(req, res) {
     _client = new Client(clientObj)
     _client.save(function(err) {
       if (err) console.error(err);
-      res.redirect('/contact');
+      res.redirect('..');
     })
 
 }

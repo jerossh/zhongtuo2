@@ -8,7 +8,7 @@ var nodemon = require('gulp-nodemon');
 // 浏览器自动重启，有重启nodemon服务
 gulp.task('browser-sync', ['nodemon'], function () {
   browserSync.init(null, {
-    proxy: 'http://localhost:4000',
+    proxy: 'http://localhost:3000',
     files: ['public/**/*.*', 'views/**/*.*'],
     browser: 'google chrome',
     notify: false,
@@ -23,7 +23,7 @@ gulp.task('nodemon', function (cb) {
   var called = false;
 
   return nodemon({
-    script: './bin/www'
+    script: 'app.js'
   }).on('start', function () {
     if (!called) {
       cb();

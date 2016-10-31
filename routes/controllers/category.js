@@ -34,9 +34,7 @@ exports.saveCategory = function(req, res) {
   var _category
   var id = categoryObj.id
 
-  console.log("这是id" + id);
-
-  if (id != 'undefined') {
+  if (id) {
     Category.findOne({_id: id}, function(err, category) {
       if (err) console.log(err);
       _category = _.assignIn(category, categoryObj)

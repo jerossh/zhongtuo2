@@ -3,11 +3,11 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId;
 
 var ClientSchema = new Schema({
-  name: String,
+  query: String,
   tel: Number,
-  mail: String,
-  address: String,
-  info: String,
+  money: Number,
+  add: String,
+  name: String,
   createAt:{
     type: Date,
     default: Date.now()

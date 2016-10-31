@@ -12,8 +12,8 @@ exports.new = function(req, res) {
   var id = req.query.id
 
   Blog.find().populate({
-    path: "category",
-    select: "name"
+    path: 'category',
+    select: 'name'
   }).exec(function(err, blogsData) {
     if (err) console.error(err);
     blogs = blogsData
@@ -29,7 +29,6 @@ exports.new = function(req, res) {
         Blog.findOne({_id: id}, function(err, blogData) {
           if (err) console.error(err);
           blog = blogData
-          console.log("这是blog" + blogData);
           res.render('admin-blog', {
             title: '新闻资讯',
             blogs: blogs,
@@ -61,10 +60,10 @@ exports.new = function(req, res) {
 //      type: 'image/jpeg' } }
 
 exports.saveBlogImg = function(req, res, next) {
+  console.log(req.files);
   var imgData =  req.files.blogImg
   var filePath = imgData.path
   var originalFilename = imgData.originalFilename
-  console.log(req.files);
   if (originalFilename) {
     fs.readFile(filePath, function(err, data) {
       if (err) console.error(err);
@@ -75,7 +74,6 @@ exports.saveBlogImg = function(req, res, next) {
       fs.writeFile(newPath, data, function(err) {
         if (err) console.error(err);
         req.img = img
-        console.log("添加图片");
         next()
       })
     })
@@ -89,7 +87,6 @@ exports.saveBlog = function(req, res) {
   var blogObj = req.body.blog
   var localPath
   var _blog
-  console.log("开始保存博客内容");
 
   if (req.img) {
     localPath = path.join('/upload/', req.img)
@@ -117,10 +114,7 @@ exports.saveBlog = function(req, res) {
       if (categoryId) {
         Category.findOne({_id: categoryId}, function(err, category) {
           category.blogs.push(blog._id)
-          console.log("这是category: " + category);
-
           category.save(function(err, category) {
-            console.log("done");
           })
         })
       }
@@ -131,7 +125,6 @@ exports.saveBlog = function(req, res) {
 
 exports.removeBlog = function(req, res) {
   var id = req.query.id
-  console.log("到这里了？");
   Blog.remove({_id: id}, function(err, okInfo) {
     if (err) {
       console.log(err);
@@ -146,65 +139,80 @@ exports.removeBlog = function(req, res) {
 
 // 前端页面
 exports.blog = function(req, res) {
+  var _categories
   var _blogs
-  var perCount = 2
+  var perCount = 5
   console.log(req.query.p);
   var page = parseInt(req.query.p, 10) || 0
   var skip = page * perCount || 0
 
-  if (page){
+  Category.find(function(err, categories) {
+    if (err) console.error(err);
+    _categories = categories;
+  })
+
+  // if (page){
     Blog.find().populate({
-      path: "category",
-      select: "name"
+      path: 'category',
+      select: 'name'
     }).skip(skip).limit(perCount).exec(function(err, blogsData){
       _blogs = blogsData
       Blog.count(function(err, count) {
         res.render('blog', {
-          title: "新闻页面",
-          subheading: "高效快捷办理针对于企业各项需求一站式服务丰富的招聘资源，优越的融资渠道，为企业发展提供最有力的支持与帮助",
+          title: '新闻页面',
           totalPage: Math.ceil(count / perCount),
           blogs: _blogs,
-          currentPage: (page + 1)
+          currentPage: (page + 1),
+          categories: _categories,
         })
       })
 
     })
-  } else {
-    Blog.find().populate({
-      path: "category",
-      select: "name"
-    }).limit(perCount).exec(function(err, blogsData){
-      if(err) console.error(err);
-      _blogs = blogsData
-
-      Blog.count(function(err, count) {
-        if(err) console.error(err);
-
-        res.render('blog', {
-          title: "新闻页面",
-          subheading: "高效快捷办理针对于企业各项需求一站式服务丰富的招聘资源，优越的融资渠道，为企业发展提供最有力的支持与帮助",
-          totalPage: Math.ceil(count / perCount),
-          blogs: _blogs,
-          currentPage: (page + 1)
-        })
-      })
-
-    })
-  }
+  // } else {
+  //   Blog.find().populate({
+  //     path: "category",
+  //     select: "name"
+  //   }).limit(perCount).exec(function(err, blogsData){
+  //     if(err) console.error(err);
+  //     _blogs = blogsData
+  //
+  //     Blog.count(function(err, count) {
+  //       if(err) console.error(err);
+  //
+  //       res.render('blog', {
+  //         title: "新闻页面",
+  //         totalPage: Math.ceil(count / perCount),
+  //         blogs: _blogs,
+  //         currentPage: (page + 1)
+  //       })
+  //     })
+  //
+  //   })
+  // }
 }
 exports.article = function(req, res) {
   var id = req.query.id
-
   var _blogs
+  var _blog
+  var _categories
+
+  Category.find({}, function(err, data) {
+    _categories = data;
+  })
+  Blog.find().limit(3).exec(function(err, blogsData){
+    _blogs = blogsData
+  })
+
   Blog.findOne({_id: id}).populate({
-    path: "category",
-    select: "name"
+    path: 'category',
+    select: 'name'
   }).exec(function(err, blogData){
     _blog = blogData
     res.render('article', {
-      title: "文章页面",
-      subheading: "了解如何成为优秀的企业家",
-      blog: _blog
+      title: '新闻页面',
+      blog: _blog,
+      categories: _categories,
+      blogs: _blogs,
     })
   })
 }

@@ -1,12 +1,16 @@
 const fs = require('fs');
+const path = require('path');
+
 exports.adminPanel = function(req, res) {
   res.render('admin', {title: '后台管理'})
 }
 
 exports.getImg = function(req, res) {
-    var path = __dirname + "../../../public/upload"
-    console.log("查看 /tmp 目录");
-    fs.readdir(path ,function(err, files){
+    // var path = __dirname + "../../../public/upload"    // 要node 6.5才有效
+    var path2 = path.join(__dirname, '../../public/upload')
+    console.log('查看 /tmp 目录');
+
+    fs.readdir(path2 ,function(err, files){
        if (err) {
            return console.error(err);
        }
@@ -22,7 +26,7 @@ exports.getImg = function(req, res) {
 
 exports.deleteImg = function(req, res) {
   var img = req.query.id
-  var path = __dirname + "../../../public/upload/" +img
+  var path = __dirname + '../../../public/upload/' +img
   fs.unlink(path, function(err) {
     if (err) {
       console.error(err);
