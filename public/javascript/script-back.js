@@ -63,9 +63,9 @@
     // 表格列表功能
     // 提交功能
 
-    $('button[type="submit"]').on('submit', function() {
-      $(this).prop('disabled', true)
-    })
+    // $('button[type="submit"]').on('submit', function() {
+    //   $(this).prop('disabled', true)
+    // })
 
 
     // 表格内事件委托
@@ -102,7 +102,7 @@
     // 这里开始委托
     $('.chute-bin').on('click', 'button', function(e) {
       var that = this
-      $(this).attr('disabled', true)
+      // $(this).attr('disabled', true)
       arr.forEach(function(val){
         if ($(that).hasClass(val)) {
           switch (val) {

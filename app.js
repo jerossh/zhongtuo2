@@ -31,11 +31,12 @@ app.use(bodyParser.json());
 app.use(multipart());
 
 app.use(cookieParser());        //session 依赖的中间件  存储sessionid
+
 app.use(session({               //用来本地存储信息 store 对象
-  secret: 'linbin',
+  secret: 'zhongtuo',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true },
+  // cookie: { secure: true },
   store: new MongoStore({
     url: dburl,
     collection: 'sessions'      // 这条不懂，为什么是sessions是
@@ -55,7 +56,7 @@ if ('development' === app.get('env')){              // 如果是开发环境
 require('./routes/router')(app);
 
 // 最后启动程序
-app.set('port', process.env.PORT || 3001);                                      // 设置端口号
+app.set('port', process.env.PORT || 3003);                                      // 设置端口号
 
 var server = app.listen(app.get('port'), function() {
   console.log('网站程序已启动，端口： ' + server.address().port);

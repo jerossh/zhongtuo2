@@ -46,12 +46,15 @@ exports.login = function(req, res) {
           console.log(5);
            if (isMatch) {
              req.session.user = user
+             console.log(req.session.user);
              console.log('Password is matched');
-             return res.redirect('/admin')
+              res.redirect('/admin')
            }
+
            else {
-             return res.redirect('/login#err')
+              res.redirect('/login#err')
            }
+
          })
 
     }
@@ -60,7 +63,7 @@ exports.login = function(req, res) {
 
 
 exports.logout = function (req, res) {
-  delete req.session.user
+  // delete req.session.user
   res.redirect('/login')
 }
 
@@ -77,6 +80,8 @@ exports.userSubmit = function (req, res) {
 }
 
 exports.userRequire = function(req, res, next) {
+  if (req.session.user) console.log('pg');
+  console.log('用户：', req.session.user);
   if (!req.session.user) {
     res.redirect('/login')
   } else {

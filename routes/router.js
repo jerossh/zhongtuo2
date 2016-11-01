@@ -85,7 +85,7 @@ module.exports = function(app){
       user: {}
     })
   })
-  app.post('/admin/usersubmit', User.userSubmit)
+  app.post('/admin/usersubmit', User.userRequire, User.userSubmit)
 
   //
   // // 处理url错误的请求，要放在 路由后面
