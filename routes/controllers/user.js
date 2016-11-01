@@ -81,6 +81,7 @@ exports.userSubmit = function (req, res) {
 
 exports.userRequire = function(req, res, next) {
   if (req.session.user) console.log('pg');
+  // req.session.user 又可以了。我日
   console.log('用户：', req.session.user);
   if (!req.session.user) {
     res.redirect('/login')
