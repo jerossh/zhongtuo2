@@ -13,7 +13,7 @@ var app = express();
 var session = require('express-session')
 var MongoStore = require('connect-mongo')(session)     // 用于本地 session
 var cookieParser = require('cookie-parser')
-var dburl = 'mongodb://localhost/zhongyukuaiji'
+var dburl = 'mongodb://localhost/zhongtuo2'
 
 // database
  mongoose.connect(dburl)
