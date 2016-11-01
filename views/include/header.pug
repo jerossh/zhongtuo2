@@ -1,27 +1,17 @@
-.alert.alert-warning(style="display:none;")
-  .container
-    button.close
-      | &times;
-    span 请求内容为空，请输入公司核名的内容，再确认。
-header.header
-  .header-area
-    .container
-      .row
-        .col-md-8
-          .header-left
-            ul.list-inline
-              li: a.qustion 有疑问马上联系我们
-              li: a(href="#")
-                i.fa.fa-envelope-o 
-                |  jerosshen@gmail.com
-              li: a(href="#")
-                i.fa.fa-phone 
-                | 15024332991 
-        .col-md-4
-              .input-group
-                input.form-control.input-sm.heming_content(placeholder="公司核名" type='text')
-                span.input-group-btn#verify
-                  a.btn.btn-default.btn-sm(type="button", href="#", data-toggle="modal", data-target="#signinModal"): i.fa.fa-search
+//- /*header.header
+//-   .header-area
+//-     .container
+//-       .row
+//-         .col-md-8
+//-           .header-left
+//-             ul.list-inline
+//-               li: a.qustion 有疑问马上联系我们
+//-               li: a(href="#")
+//-                 i.fa.fa-envelope-o
+//-                 |  jerosshen@gmail.com
+//-               li: a(href="#")
+//-                 i.fa.fa-phone
+//-                 | 15024332991*/
 nav.menu
   .container
     .row
@@ -37,7 +27,7 @@ nav.menu
             //-   a(href='#') 公司注册
             li.dropdown
               a.dropdown-toggle(href='portfolio-1.html', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                | 公司注册 
+                | 公司注册
                 i.fa.fa-caret-down
               ul.dropdown-menu.portfolio-list
                 li
@@ -45,43 +35,32 @@ nav.menu
                 li
                   a(href='#') 外资注册
             li
-              a(href='#') 代理记账
+              a(href='#') 商标注册
             li
-              a(href='/advan') 公司优势
+              a(href='/advan') 公司服务
             li
-              a(href='/blog?p=0') 新闻资讯
-            li
-              a(href='/about') 关于我们
-            li
-              a(href='/contact') 联系我们
-#signinModal.modal.fade
-  .modal-dialog
-    .modal-content
-      form(method="POST", action="/admin/client")
-        .modal-header.client-search-header 公司名称免费查询
-        .modal-body
-          .form-group
-            label(for="clientquery") 公司名称
-            input#clientquery.form-control(name="client[query]", type="text", required)
-          .form-group
-            label(for="clientquery") 注册资金(单位：万) 
-            input#clientquery.form-control(name="client[money]", type="text", required)
-          .form-group
-            label(for="clientquery") 公司地址
-            input#clientquery.form-control(name="client[add]", type="text", required)
-          .form-group
-            label(for="ClientTel") 联系人电话
-            input#clientTel.form-control(name="client[tel]", type="tel", required)
-          .form-group
-            label(for="ClientName") 联系人姓名
-            input#clientName.form-control(name="client[name]", type="text", required)
-        .modal-footer
-          button.btn.btn-default(type="button", data-dismiss="modal") 关闭
-          button.btn.btn-primary.submit(type="submit") 获取查询结果
-            
-          
-      
-    
-            
-        
-            
+              a(href='/about') 核名神器
+//- #signinModal.modal.fade
+//-   .modal-dialog
+//-     .modal-content
+//-       form(method="POST", action="/admin/client")
+//-         .modal-header.client-search-header 公司名称免费查询
+//-         .modal-body
+//-           .form-group
+//-             label(for="clientquery") 公司名称
+//-             input#clientquery.form-control(name="client[query]", type="text", required)
+//-           .form-group
+//-             label(for="clientquery") 注册资金(单位：万)
+//-             input#clientquery.form-control(name="client[money]", type="text", required)
+//-           .form-group
+//-             label(for="clientquery") 公司地址
+//-             input#clientquery.form-control(name="client[add]", type="text", required)
+//-           .form-group
+//-             label(for="ClientTel") 联系人电话
+//-             input#clientTel.form-control(name="client[tel]", type="tel", required)
+//-           .form-group
+//-             label(for="ClientName") 联系人姓名
+//-             input#clientName.form-control(name="client[name]", type="text", required)
+//-         .modal-footer
+//-           button.btn.btn-default(type="button", data-dismiss="modal") 关闭
+//-           button.btn.btn-primary.submit(type="submit") 获取查询结果

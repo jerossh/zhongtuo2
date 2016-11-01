@@ -23,7 +23,7 @@ exports.new = function(req, res, next) {
 }
 
 exports.change = function(req, res) {
-  console.log("这是id：" + req.id);
+  console.log('这是id：' + req.id);
   Slide.findOne({_id: req.id}, function(err, slide) {
     if (err) console.error(err);
     res.render('admin-slide',{
@@ -39,7 +39,7 @@ exports.deleteImg = function(req, res, next) {
 
   if (id) {
     Slide.findOne({_id: id}, function(err, slide) {
-      console.log("准备删除文件");
+      console.log('准备删除文件');
       var file = slide.img
       file = file.replace(/\\/g, '/')
       file = path.join(__dirname, '../../', '/public/' + file)
@@ -88,7 +88,7 @@ exports.saveUploadImg = function(req, res, next){
         var type = imgData.type.split('/')[1]
         var img = timetamp + '.' + type
         var newPath = path.join(__dirname, '../../', '/public/upload/' + img)
-        console.log("newPath" + newPath);
+        console.log('newPath' + newPath);
         fs.writeFile(newPath, data, function(err) {
           req.img = img
           next()

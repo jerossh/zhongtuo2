@@ -1,0 +1,25 @@
+.carousel-inner>.item>img {
+    margin-left: calc(50% - 800px);
+}
+
+
+.icon-box {
+  text-align: center;
+  line-height: 3;
+  padding: 30px 0;
+  color: white;
+}
+
+.icon-box:nth-of-type(1) {
+  background-color: red;
+}
+/*nth-of-type(2)不行*/
+.icon-box:nth-of-type(2) {
+  background-color: green;
+}
+.icon-box:nth-of-type(3) {
+  background-color: blue
+}
+.icon-box:nth-of-type(4) {
+  background-color: #f0ad4e;
+}

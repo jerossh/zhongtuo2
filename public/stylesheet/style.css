@@ -1,3 +1,5 @@
+@import url("index.css");
+
 body {
   font-family: 'microsoft yahei';
 }
@@ -59,13 +61,6 @@ ul {
     display: block;
     max-width: none;
     height: auto;
-}
-/*控制部分*/
-.carousel-indicators li{
-
-}
-.carousel-inner>.item>img {
-    margin-left: calc(50% - 960px);
 }
 
 
