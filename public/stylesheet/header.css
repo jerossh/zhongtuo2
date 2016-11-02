@@ -48,6 +48,14 @@ nav, .navbar-default {
     color: #98adca;
     background-color: transparent;
 }
+.dropdown-menu>li>a {
+    font-size: 13px;
+    color: #8c99a1;
+}
+.dropdown-menu>li>a:hover {
+    font-size: 13px;
+    color: #9daab2;
+}
 /*.page-header {
   background-color: #fdfdfd;
   margin: 0px 0 20px;

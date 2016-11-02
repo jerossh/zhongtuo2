@@ -17,7 +17,7 @@ exports.indexBlog = function(req, res) {
     if(err) console.log(err);
     blogs = BlogsData
     res.render('index.pug', {
-      title: '中誉会计',
+      title: '中拓企业管理',
       slides: res.slides,
       blogs: blogs
     })
@@ -26,11 +26,26 @@ exports.indexBlog = function(req, res) {
 
 exports.heming = function(req, res) {
     res.render('heming', {
-      title: '联系我们'
+      title: '核名神器'
     })
 }
-exports.about = function(req, res) {
-    res.render('about', {
-      title: '关于我们'
+exports.service = function(req, res) {
+    res.render('service', {
+      title: '公司服务'
+    })
+}
+exports.brand = function(req, res) {
+    res.render('brand', {
+      title: '商标注册'
+    })
+}
+exports.firm_in = function(req, res) {
+    res.render('firm_in', {
+      title: '内资注册'
+    })
+}
+exports.firm_out = function(req, res) {
+    res.render('firm_out', {
+      title: '外资注册'
     })
 }
