@@ -1,25 +1,115 @@
 .carousel-inner>.item>img {
-    margin-left: calc(50% - 800px);
+    width: 100vw;
 }
 
 
 .icon-box {
   text-align: center;
   line-height: 3;
-  padding: 30px 0;
+  padding: 50px 0 30px;
   color: white;
 }
 
 .icon-box:nth-of-type(1) {
-  background-color: red;
+  background-color: #80c1e8;
 }
 /*nth-of-type(2)不行*/
 .icon-box:nth-of-type(2) {
-  background-color: green;
+  background-color: #6be193;
 }
 .icon-box:nth-of-type(3) {
-  background-color: blue
+  background-color: #44d0ab
 }
 .icon-box:nth-of-type(4) {
-  background-color: #f0ad4e;
+  background-color: #ff545a;
+}
+
+
+#news {
+  background: url('/images/news_bg.jpg') no-repeat;
+  background-size: cover;
+  padding: 80px 0 100px;
+  color: #555;
+}
+#news .topic-title h2 {
+  font-size: 2.2rem;
+}
+#news .topic-title .more {
+  padding-right: 20px;
+  margin-top: -25px;
+  color: #8cd6f1;
+}
+.single-news {
+  display: block;
+  padding: 15px 0;
+}
+.single-news .col-md-3 {
+  padding: 0
+}
+.single-news h3 {
+  font-size: 1.7rem;
+}
+.single-news p {
+  font-size: 1.3rem;
+}
+.news-img {
+  margin: 25px 0 0;
+  border-radius: 30%;
+  overflow: hidden;
+}
+
+#advan {
+  background: url('/images/advan_bg.jpg') no-repeat;
+  background-size: cover;
+}
+.title{
+  padding: 60px 0 40px;
+}
+.advan-icons {
+  position: relative;
+  height: 480px;
+}
+.icon-list .icon {
+  position: absolute;
+}
+.icon-list .icon:nth-of-type(1) {
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon-list .icon:nth-of-type(2) {
+  top: 0px;
+  left: 19%;
+}
+.icon-list .icon:nth-of-type(3) {
+  top: 0px;
+  right: 20%;
+}
+.icon-list .icon:nth-of-type(4) {
+  top: 250px;
+  left: 29%;
+}
+.icon-list .icon:nth-of-type(5) {
+  top: 260px;
+  right: 30%;
+}
+.icon-list .icon:nth-of-type(6) {
+  top: 200px;
+  left: 14%;
+}
+.icon-list .icon:nth-of-type(7) {
+  top: 160px;
+  right: 12%;
+}
+.icon-list .icon:nth-of-type(8) {
+  top: 300px;
+  left: 8%;
+}
+.icon-list .icon:nth-of-type(9) {
+  top: 0px;
+  right: 6%;
+}
+.icon-list .icon:nth-of-type(10) {
+  top: 10px;
+  left: 4%;
 }
