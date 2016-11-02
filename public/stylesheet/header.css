@@ -14,7 +14,7 @@
     color: #2796de;
 }
 nav, .navbar-default {
-  background-color: #fdfdfd;
+  background-color: #f6f9fc;
 }
 /*菜单部分*/
 .menu .navbar {
@@ -36,10 +36,20 @@ nav, .navbar-default {
     padding: 5px 15px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-family: 'microsoft yahei', serif;
+    font-family: 'microsoft yahei';
+    color: #6b7c93;
 }
-.page-header {
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #6b6c82;
+    background-color: #ebf0f5;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #98adca;
+    background-color: transparent;
+}
+/*.page-header {
   background-color: #fdfdfd;
   margin: 0px 0 20px;
   box-shadow: 0 2px 4px rgba(50,50,93,.1);
-}
+}*/
