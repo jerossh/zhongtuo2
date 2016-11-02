@@ -1,6 +1,26 @@
+
+/*幻灯片部分*/
+.home {
+    position: relative;
+}
+.carousel-control{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: none;
+    height: auto;
+}
+
+
+
 .carousel-inner>.item>img {
     width: 100vw;
 }
+
+
 
 
 .icon-box {

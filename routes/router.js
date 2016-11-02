@@ -23,8 +23,8 @@ module.exports = function(app){
 
   // 前端页面
   app.get('/', Index.indexSlide, Index.indexBlog);
-  app.get('/about', Index.about);
-  app.get('/contact', Index.contact);
+  app.get('/heming', Index.heming);
+  // app.get('/contact', Index.contact);
   app.get('/blog', Blog.blog);
   app.get('/blog/article', Blog.article);
 

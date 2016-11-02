@@ -1,0 +1,45 @@
+/*顶部栏部分*/
+.header-area {
+    margin: 0;
+    margin-top: 10px;
+    min-height: 40px;
+    border-bottom: 1px solid #eee;
+}
+.header-left > .list-inline > li > a {
+    line-height: 2.8;
+    font-size: 11px;
+    color: #999;
+}
+.header-left .fa {
+    color: #2796de;
+}
+nav, .navbar-default {
+  background-color: #fdfdfd;
+}
+/*菜单部分*/
+.menu .navbar {
+    border: 0;
+    min-height: 75px;
+    border-radius: 0;
+    margin-bottom: 0;
+    /*这三个新属性可以让元素垂直居中*/
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.menu .navbar-nav > li > a {
+    border-radius: 3px;
+    color: #000;
+    font-size: 13px;
+    font-weight: 900;
+    margin: 0 2px;
+    padding: 5px 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'microsoft yahei', serif;
+}
+.page-header {
+  background-color: #fdfdfd;
+  margin: 0px 0 20px;
+  box-shadow: 0 2px 4px rgba(50,50,93,.1);
+}

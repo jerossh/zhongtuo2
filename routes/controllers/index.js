@@ -24,8 +24,8 @@ exports.indexBlog = function(req, res) {
   })
 }
 
-exports.contact = function(req, res) {
-    res.render('contact', {
+exports.heming = function(req, res) {
+    res.render('heming', {
       title: '联系我们'
     })
 }
