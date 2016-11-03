@@ -21,12 +21,14 @@
 }
 
 
-
-
+/*业务员概览部分*/
 .icon-box {
   text-align: center;
   line-height: 3;
   padding: 50px 0 30px;
+  color: white;
+}
+.icon-box a {
   color: white;
 }
 
@@ -44,7 +46,7 @@
   background-color: #ff545a;
 }
 
-
+/*攻略部分*/
 #news {
   background: url('/images/news_bg.jpg') no-repeat;
   background-size: cover;
@@ -78,6 +80,7 @@
   overflow: hidden;
 }
 
+/*优势部分*/
 #advan {
   background: url('/images/advan_bg.jpg') no-repeat;
   background-size: cover;
@@ -92,10 +95,25 @@
 .icon-list .icon {
   position: absolute;
 }
+.icon-list .icon::before {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background: #95caed;
+  text-align: center;
+  color: white;
+  visibility: hidden;
+}
 .icon-list .icon:nth-of-type(1) {
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.icon-list .icon:hover:before {
+  visibility:visible;
 }
 .icon-list .icon:nth-of-type(2) {
   top: 0px;
@@ -132,4 +150,37 @@
 .icon-list .icon:nth-of-type(10) {
   top: 10px;
   left: 4%;
+}
+
+
+.icon-list .icon:nth-of-type(1)::before {
+  content:'公司注册';
+}
+.icon-list .icon:nth-of-type(2)::before {
+  content:'商标注册';
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  font-size: 0.8em;
+}
+.icon-list .icon:nth-of-type(3)::before {
+  content:'人事代理';
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  font-size: 0.8em;
+}
+.icon-list .icon:nth-of-type(4)::before {
+  content:'律师团队';
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 0.6em;
+}
+.icon-list .icon:nth-of-type(5)::before {
+  content:'平台入驻';
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 0.6em;
 }

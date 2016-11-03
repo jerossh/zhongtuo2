@@ -1,8 +1,10 @@
 #heming {
   overflow: hidden;
 }
+
+/*表格部分*/
 #heming_from {
-  padding: 0px 0 60px;
+  padding: 0px 0 100px;
 }
 .form-control {
     color: #889dbf;
@@ -13,7 +15,7 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 
 
-
+/*分析结果展示*/
 .heming_result {
   padding: 30px 0 160px;
   color: #6b7c93;
@@ -49,7 +51,7 @@ input[placeholder], [placeholder], *[placeholder] {
   color: rgb(47, 49, 139);
 }
 .result {
-  padding: 20px;
+  padding: 20px 20px 25px;
   padding-left: 100px;
   text-decoration:none;
 }

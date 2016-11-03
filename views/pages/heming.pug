@@ -31,8 +31,8 @@ block content
                   input.form-control(type='text', name="industry", placeholder="输入行业")
                 .form-group
                   label.sr-only(for="111")
-                  input.form-control(type='text', list="addr", name="addr", placeholder="公司类型" )
-                  datalist#addr
+                  input.form-control(type='text', list="type", name="addr", placeholder="公司类型" )
+                  datalist#type
                     option(value="有限公司")
                     option(value="有限责任公司")
                     option(value="股份公司")
@@ -45,10 +45,10 @@ block content
           .col-md-4
             a.result_box
               .icon_left.pull-left
-                i.fa.fa-5x.fa-free-code-camp
+                i.fa.fa-5x.fa-bomb
               .result
                 h2 敏感词分析
-                p 无敏感词，可尽情使用
+                p 分析结果：无敏感词，可尽情使用
           .col-md-4
             a.result_box
               .icon_left.pull-left

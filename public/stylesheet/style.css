@@ -1,9 +1,11 @@
-@import url("header.css");
-@import url("footer.css");
+@import url("header.min.css");
+@import url("footer.min.css");
 
 
-@import url("index.css");
-@import url("heming.css");
+@import url("index.min.css");
+@import url("heming.min.css");
+@import url("service.min.css");
+@import url("brand.min.css");
 
 body {
   font-family: 'microsoft yahei';
@@ -12,6 +14,7 @@ body {
 section {
   position: relative;
   z-index: 10;
+  padding-bottom: 60px;
 }
 a:link {
  text-decoration: none;
@@ -31,13 +34,6 @@ h1,h2,h3,h4,h5,h6 {
 p {
   color: #6b7c93;
 }
-
-
-
-
-
-
-
 
 
 
